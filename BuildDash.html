@@ -9,13 +9,34 @@
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-    <script src="buildDashjs.js"></script>
+    <script src="game4emjs.js"></script>
     <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.x/dist/aframe-controller-cursor-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/kframe/csstricks/scenes/aincraft/components/random-color.js"></script>
     <script src="https://rawgit.com/ngokevin/kframe/csstricks/scenes/aincraft/components/snap.js"></script>
     <script src="https://rawgit.com/ngokevin/kframe/csstricks/scenes/aincraft/components/intersection-spawn.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="timer-component.js"></script>     
+ <script>
+      //To pause the timer
+       function PauseTimer(){
+        var clock=document.getElementById("timer");
+        clock.pause();
+     }
+    
+     //To restart the timer
+    function RestartTimer(){
+        var clock=document.getElementById("timer");
+        clock.play();
+     }
+    //To remove the entity from the scene
+     function RemoveTimer(){
+        console.log("removing");
+        var clock=document.getElementById("timer");       
+        document.querySelector("a-scene").removeChild(clock);
+     }
+     </script>
   </head>
   <body>
     <a-scene>
@@ -60,7 +81,10 @@
         <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
       </a-entity>
-
+        
+       <!-- timer --> 
+ <a-entity id="timer" timer=" timerTime:5;DigitsColor:yellow"
+            position="0 1.5 -5"></a-entity>
       <!-- Camera + cursor. -->
     <a-entity>    
        <a-cursor id="cursor"
@@ -81,5 +105,7 @@
     </a-camera>  
       </a-entity>
     </a-scene>
+    <button onclick="PauseTimer()" style="position: absolute;top:80%;left :20% ;" type="button" class="btn btn-warning">Pause</button>
+   <button onclick="RestartTimer()" style="position: absolute;top:80%;left: 50%;" type="button" class="btn btn-success">Restart</button>
+   <button onclick="RemoveTimer()" style="position: absolute;top:80%;left: 80%;" type="button" class="btn btn-danger">Remove</button>  
   </body>
-   
