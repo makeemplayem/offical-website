@@ -1,15 +1,19 @@
 body {
 background-color: lightgray;        
 }
-h1{
+h1 { 
 padding-top: 350px;
 padding-left:500px;     
 color: coral;
 }
-H2{
+h2 {
 padding-top: 30px;
 padding-left: 500px;
 color: orange;
 }
-
+img {
+     position: fixed;
+  bottom: 700;
+  left: 80;
+}
 
