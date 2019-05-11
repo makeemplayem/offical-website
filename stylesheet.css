@@ -39,3 +39,6 @@ color: black;
 p { color: chartreuse;}
 h2 {color: darkorange;}
 h2 {font-size: 50px;}
+iframe{
+  max-width: 100% !important;
+}
