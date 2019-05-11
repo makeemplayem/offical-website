@@ -42,3 +42,6 @@ h2 {font-size: 50px;}
 iframe{
   max-width: 100% !important;
 }
+iframe{
+  max-height: 100% !important;
+}
