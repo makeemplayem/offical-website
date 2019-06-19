@@ -1,4 +1,4 @@
-<url>
+
 
 var gravityScore,
 	 href = window.location.href;
@@ -311,5 +311,4 @@ function getClass(id) {
 	return document.getElementsByClassName(id);
 }
 
-</url>
-</urlset>
+
