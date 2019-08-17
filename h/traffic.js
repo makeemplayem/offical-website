@@ -1,4 +1,5 @@
 var reCAPTCHA = alert("complete rereCAPTCHA. go to https://developers.google.com/speed/pagespeed/insights/?utm_source=analytics&tab=desktop&url=http%3A%2F%2Fmakeemplayem.com%2F");
+
 var a = prompt("how much traffic", "0");
 var b = 0;
 var c = 0;
